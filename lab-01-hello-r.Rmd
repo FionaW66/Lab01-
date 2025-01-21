@@ -40,22 +40,20 @@ After plotting the data from the dino data set, we got a dinosaur-shaped graph. 
 
 ### Exercise 3
 
-This is your turn to write the code and narrative for the star dataset. Follow the same steps as above to complete the analysis. Don't forget to label your chunks appropriately!
-
-Note that the R chunks are labeled with `plot-star` and `cor-star` to provide spaces to place the code for plotting and calculating the correlation coefficient.
-To finish, clean up the narrative by removing these instructions.
-
 ```{r plot-star}
-
+star_data <- datasaurus_dozen %>%
+  filter(dataset == "star")
+ggplot(data = star_data, mapping = aes(x = x, y = y)) +
+  geom_point()
 ```
 
-I'm some filler text, you should replace me with more meaningful text...
+The star dataset end up having a star-shaped graph after plotting x and y variables within in the dataset.
 
 ```{r cor-star}
-
+star_data %>%
+  summarize(r = cor(x, y))
 ```
-Add your explanation here—what did you notice?
-
+From observing the graph, it didn't seem like a linear relationship. Correlation analysis showed that there is a weak and negative relationship between x and y for the star dataset, r = -.0630. This r value is quite close to the dino dataset. Again, there is no p value for significance testing, but given that it is very weak, I think it's not significant. Both dino and star dataset have very cool graphs, but neither has a linear relationship.
 
 ### Exercise 4
 
