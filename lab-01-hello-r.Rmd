@@ -1,7 +1,7 @@
 ---
 title: "Lab 01 - Hello R"
-author: "Insert your name here"
-date: "Insert date here"
+author: "Fiona Wang"
+date: "Jan-21-2025"
 output: 
   html_document: 
     fig_height: 4
@@ -19,7 +19,7 @@ library(datasauRus)
 
 ### Exercise 1
 
-Remove this text, and add your answer for Exercise 1 here.
+Based on the help file, this data set has 1846 rows and 3 columns. The three variables included in the data frame are "dataset", "x", and "y". 
 
 ### Exercise 2
 
