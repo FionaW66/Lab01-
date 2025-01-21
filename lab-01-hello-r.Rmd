@@ -57,15 +57,20 @@ From observing the graph, it didn't seem like a linear relationship. Correlation
 
 ### Exercise 4
 
-Add your code and narrative to complete this exercise. Use the conventions from the previous exercises to name your chunks and organize your work.
-
-```{r}
-
+```{r plot-circle}
+circle_data <- datasaurus_dozen %>%
+  filter(dataset == "circle")
+ggplot(data = circle_data, mapping = aes(x = x, y = y)) +
+  geom_point()
 ```
 
-```{r}
+As we can see from the graph, the data points in the circle data set forms a circle-shaped graph. I also see three data points lying out of the circle.
 
+```{r cor-circle}
+circle_data %>%
+  summarize(r = cor(x,y))
 ```
+From the correlation analysis, there is a weak and negative relationship between x and y in the circle dataset, r = -.0683. It's slightly more negative than the dino data set, but really they are quite similar. I would guess that this is also not a significant correlation. So far, all three datasets have shapes that correspond to their names. X and y variables had no linear relationship (or very weakly negative relationship) for all three datasets.
 
 ### Exercise 5
 
