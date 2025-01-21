@@ -23,10 +23,6 @@ Based on the help file, this data set has 1846 rows and 3 columns. The three var
 
 ### Exercise 2
 
-The answers for this exercise are already provided to help guide you. Clean up the narrative to reflect what you want to submit. Let’s break it into steps:
-
-First, let's plot the data in the dino dataset:
-
 ```{r plot-dino, fig.height=3, fig.width=6}
 dino_data <- datasaurus_dozen %>%
   filter(dataset == "dino")
@@ -35,14 +31,12 @@ ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
   geom_point()
 ```
 
-Next, let's calculate the correlation between `x` and `y` in this dataset:
 
 ```{r cor-dino}
 dino_data %>%
   summarize(r = cor(x, y))
 ```
-Once you’ve cleaned up the text, add your own explanation or observations here!
-
+After plotting the data from the dino data set, we got a dinosaur-shaped graph. Even though there didn't seem to be a linear relationship between x and y variables from observing the graph, a correlation analysis was conducted. There is a very weak and negative correlation  between x and y, r = -.0645.There is no p-value to determine whether it is significant or not. But since it's very weak, I would guess that it is not significant.
 
 ### Exercise 3
 
