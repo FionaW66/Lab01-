@@ -62,7 +62,8 @@ From observing the graph, it didn't seem like a linear relationship. Correlation
 circle_data <- datasaurus_dozen %>%
   filter(dataset == "circle")
 ggplot(data = circle_data, mapping = aes(x = x, y = y)) +
-  geom_point()
+  geom_point() +
+  coord_fixed()
 ```
 
 As we can see from the graph, the data points in the circle data set forms a circle-shaped graph. I also see three data points lying out of the circle.
